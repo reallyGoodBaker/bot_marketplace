@@ -32,7 +32,7 @@ class MusicSearch extends Plugin {
     this.storage.type = bot.type;
     this.storage.id = bot.id;
     bundle.asyncTask(resolve => {
-      request('http://music.cyrilstudio.top/search?keywords=' + encodeURI(msg) + '&limit=8' + '&offset=' + offset * 8, (err, res, body) => {
+      request('https://bot-neteasemusic-api.vercel.app/search?keywords=' + encodeURI(msg) + '&limit=8' + '&offset=' + offset * 8, (err, res, body) => {
         try {
           body = JSON.parse(body);
         } catch (error) {
