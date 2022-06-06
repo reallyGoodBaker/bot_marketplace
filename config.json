@@ -1,0 +1,32 @@
+[
+    {
+        "name": "MusicSearch",
+        "comment": "搜歌并播放~",
+        "ver": ["0","0","1"]
+    },
+    {
+        "name": "WhereIsMyWife",
+        "comment": "看看二刺螈美少女!!!",
+        "ver": ["0","0","1"]
+    },
+    {
+        "name": "DoesNotExistWaifu",
+        "comment": "AI给你画头像",
+        "ver": ["0","0","1"]
+    },
+    {
+        "name": "SayTime",
+        "comment": "时间格式化输出",
+        "ver": ["0","0","1"]
+    },
+    {
+        "name": "Todo",
+        "comment": "简单的待办事件管理插件~",
+        "ver": ["0","0","2"]
+    },
+    {
+        "name": "Remind",
+        "comment": "定时提醒",
+        "ver": ["0","0","1"]
+    }
+]
