@@ -1,5 +1,6 @@
 /// <reference path="extension.d.ts"/>
 const request = require('request');
+const { segment } = require("oicq")
 
 const SetuUrl = 'https://api.lolicon.app/setu/v2?r18=1&'
 
@@ -20,7 +21,6 @@ class Setu extends Plugin {
         const [type, count] = args
 
         asyncTask(resolve => {
-            console.log(`${SetuUrl}tag=${type}&num=${count > 0 && count < 21 ? count: 1}`);
             request.get(`${SetuUrl}tag=${encodeURI(type)}&num=${count > 0 && count < 21 ? count: 1}`, (err, res, body) => {
                 if (err) {
                     asyncTask(bot.send(`请求失败\n${err}`))
@@ -40,10 +40,11 @@ class Setu extends Plugin {
                     return resolve()
                 }
     
-                let msg = ''
+                let msg = []
                 data.data.forEach(setu => {
-                    const {pid, title, author} = setu
-                    msg += `${title} - ${author}`
+                    const {pid, title, author, urls} = setu
+                    msg.push(`${title} - ${author}`)
+                    msg.push(segment.image(urls.thumb))
                 })
     
                 asyncTask(bot.send(msg))
