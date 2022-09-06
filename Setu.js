@@ -21,7 +21,7 @@ class Setu extends Plugin {
 
         asyncTask(resolve => {
             console.log(`${SetuUrl}tag=${type}&num=${count > 0 && count < 21 ? count: 1}`);
-            request.get(`${SetuUrl}tag=${type}&num=${count > 0 && count < 21 ? count: 1}`, (err, res, body) => {
+            request.get(`${SetuUrl}tag=${encodeURI(type)}&num=${count > 0 && count < 21 ? count: 1}`, (err, res, body) => {
                 if (err) {
                     asyncTask(bot.send('请求失败'))
                     return resolve()
