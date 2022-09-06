@@ -1,6 +1,3 @@
-const interfaces = require('../interfaces.js');
-const { Plugin, Schedule } = require('../plugin.js');
-const Service = require('../service.js');
 /// <reference path="extension.d.ts"/>
 const request = require('request');
 const { segment } = require("oicq")
