@@ -23,7 +23,7 @@ class Setu extends Plugin {
             console.log(`${SetuUrl}tag=${type}&num=${count > 0 && count < 21 ? count: 1}`);
             request.get(`${SetuUrl}tag=${encodeURI(type)}&num=${count > 0 && count < 21 ? count: 1}`, (err, res, body) => {
                 if (err) {
-                    asyncTask(bot.send('请求失败'))
+                    asyncTask(bot.send(`请求失败\n${err}`))
                     return resolve()
                 }
     
@@ -31,12 +31,12 @@ class Setu extends Plugin {
                 try {
                     data = JSON.parse(body)
                 } catch (err) {
-                    asyncTask(bot.send('数据解析失败'))
+                    asyncTask(bot.send(`数据解析失败\n${err}`))
                     return resolve()
                 }
     
                 if (data.error) {
-                    asyncTask(bot.send('获取失败'))
+                    asyncTask(bot.send(`获取失败\n${data.error}`))
                     return resolve()
                 }
     
