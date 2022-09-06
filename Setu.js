@@ -4,36 +4,6 @@ const { segment } = require("oicq")
 
 const SetuUrl = 'https://api.lolicon.app/setu/v2?r18=1&size=original&size=thumb&'
 
-const jsonCard = {
-    "app": "com.tencent.structmsg",
-    "desc": "{{desc}}",
-    "view": "news",
-    "ver": "0.0.0.1",
-    "prompt": "[分享]湖南工程学院2022年秋季学期开学须知！",
-    "meta": {
-        "news": {
-            "action": "",
-            "android_pkg_name": "",
-            "app_type": 1,
-            "appid": 1,
-            "ctime": 1662473381411,
-            "desc": "desc",
-            "jumpUrl": "https:\/\/www.baidu.com\/favicon.ico",
-            "preview": "https:\/\/www.baidu.com",
-            "source_icon": "https:\/\/www.baidu.com\/favicon.ico",
-            "source_url": "",
-            "tag": "tag",
-            "title": "title",
-            "uin": 1323995382
-        }
-    },
-    "config": {
-        "ctime": 1662473381411,
-        "forward": true,
-        "token": "46c4a5ee7fed552441e044df12455a8a",
-        "type": "normal"
-    }
-}
 
 class Setu extends Plugin {
 
